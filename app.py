@@ -30,6 +30,22 @@ def achievements():
 def notes():
     return send_from_directory('.', 'notes.html')
 
+@app.route("/contact.html")
+def contact_html():
+    return send_from_directory('.', 'contact.html')
+
+@app.route("/contact")
+def contact_page():
+    return redirect(url_for('contact_html'))
+
+@app.route("/login.html")
+def login_html():
+    return send_from_directory('.', 'login.html')
+
+@app.route("/login")
+def login_page():
+    return redirect(url_for('login_html'))
+
 @app.route("/home.html")
 def home_html():
     return send_from_directory('.', 'home.html')
