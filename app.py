@@ -12,7 +12,7 @@ def home():
 
 @app.route("/index.html")
 def index():
-    return send_from_directory('.', 'index.html')
+    return redirect(url_for('home_html'))
 
 @app.route("/thoughts.html")
 def thoughts():
