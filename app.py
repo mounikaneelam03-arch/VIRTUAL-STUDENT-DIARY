@@ -8,31 +8,31 @@ diary_entries = []
 
 @app.route("/")
 def home():
-    return send_from_directory('.', 'home.html')
+    return send_from_directory(app.root_path, 'home.html')
 
 @app.route("/index.html")
 def index():
-    return redirect(url_for('home_html'))
+    return send_from_directory(app.root_path, 'index.html')
 
 @app.route("/thoughts.html")
 def thoughts():
-    return send_from_directory('.', 'thoughts.html')
+    return send_from_directory(app.root_path, 'thoughts.html')
 
 @app.route("/goals.html")
 def goals():
-    return send_from_directory('.', 'goals.html')
+    return send_from_directory(app.root_path, 'goals.html')
 
 @app.route("/achivements.html")
 def achievements():
-    return send_from_directory('.', 'achivements.html')
+    return send_from_directory(app.root_path, 'achivements.html')
 
 @app.route("/notes.html")
 def notes():
-    return send_from_directory('.', 'notes.html')
+    return send_from_directory(app.root_path, 'notes.html')
 
 @app.route("/contact.html")
 def contact_html():
-    return send_from_directory('.', 'contact.html')
+    return send_from_directory(app.root_path, 'contact.html')
 
 @app.route("/contact")
 def contact_page():
@@ -40,7 +40,7 @@ def contact_page():
 
 @app.route("/login.html")
 def login_html():
-    return send_from_directory('.', 'login.html')
+    return send_from_directory(app.root_path, 'login.html')
 
 @app.route("/login")
 def login_page():
@@ -48,7 +48,7 @@ def login_page():
 
 @app.route("/home.html")
 def home_html():
-    return send_from_directory('.', 'home.html')
+    return send_from_directory(app.root_path, 'home.html')
 
 @app.route("/home")
 def home_page():
@@ -56,19 +56,19 @@ def home_page():
 
 @app.route("/attendance.html")
 def attendance():
-    return send_from_directory('.', 'attendance.html')
+    return send_from_directory(app.root_path, 'attendance.html')
 
 @app.route("/intial.html")
 def initial():
-    return send_from_directory('.', 'intial.html')
+    return send_from_directory(app.root_path, 'intial.html')
 
 @app.route("/script.js")
 def script():
-    return send_from_directory('.', 'script.js')
+    return send_from_directory(app.root_path, 'script.js')
 
 @app.route("/style.css")
 def style():
-    return send_from_directory('.', 'style.css')
+    return send_from_directory(app.root_path, 'style.css')
 
 @app.route("/add", methods=["GET", "POST"])
 def add_entry():
